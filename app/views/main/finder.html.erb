@@ -1,0 +1,104 @@
+<main id="main">
+    <div class="title">
+        <p><%= @title %></p>
+    </div>
+
+    <div class="separation_line">
+        <hr>
+    </div>
+
+    <div id="finder_table">
+        <img style="float: right;opacity: 90%" width="755" src="showcase.jpg" alt="showcase">
+
+        <table>
+            <tr>
+                <td>
+                    <p>Valstybė:
+                </td>
+                <td>
+                    <input type="text" list="salys"/>
+                    <datalist id="salys">
+                        <option>Lietuva</option>
+                        <option>Latvija</option>
+                        <option>Estija</option>
+                        <option>...</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Regionas:</p>
+                </td>
+                <td>
+                    <input type="text" list="regionai"/>
+                    <datalist id="regionai">
+                        <option>Bretanė</option>
+                        <option>...</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Miestas:</p>
+                </td>
+                <td>
+                    <input type="text" list="miestai"/>
+                    <datalist id="miestai">
+                        <option>Madridas</option>
+                        <option>Vilnius</option>
+                        <option>...</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Keliautojų skaičius:</p>
+                </td>
+                <td>
+                    <input type="number"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Kaina žmogui (nuo - iki):</p>
+                </td>
+                <td style="text-align: center;">
+                    <input style="width: 100px" type="number"/> - 
+                    <input style="width: 100px" type="number"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Pradžios data:</p>
+                </td>
+                <td>
+                    <input type="date"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Pabaigos data:</p>
+                </td>
+                <td>
+                    <input type="date"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Reikalingas gidas:</p>
+                </td>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <button class="submit" type="button">Ieškoti</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</main>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails5</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <%= link_to image_tag("logo.png"), "/" %>
+
+      <div id="nav">
+          <nav>
+              <%= link_to('Pagrindinis', '/') %>
+              <%= link_to('Kelionių paieška', '/kelioniu-paieska') %>
+              <%= link_to('Kontaktai', '/kontaktai') %>
+              <%= link_to('Apie mus', '/apie') %>
+          </nav>
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <p class="footer_text">© 2020 Rytis Simanavičius</p>
+    </footer>
+  </body>
+</html>
