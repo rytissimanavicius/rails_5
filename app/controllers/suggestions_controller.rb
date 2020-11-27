@@ -4,7 +4,6 @@ class SuggestionsController < ApplicationController
 
     $pvm = 0.00
 
-
     # Calculate and set the prices for
     # views/suggestions/suggestions.html.erb template
     def suggestions

@@ -1,0 +1,41 @@
+<main id="main">
+    <div class="title">
+        <p><%= @title %></p>
+    </div>
+
+    <div class="separation_line">
+        <hr>
+    </div>
+
+    <%= form_tag(trips_path, method: 'get') do %>
+        Ieškoti pavadinimo: <%= text_field_tag(:search, params[:search]) %>
+        <%= submit_tag("Search") %>
+    <% end %>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Pavadinimas</th>
+            <th>Apibūdinimas</th>
+            <th>Kaina</th>
+            <th>Šalis</th>
+            <th>Regionas</th>
+            <th>Miestas</th>
+        </tr>
+        <% @trips.each do |trip| %>
+            <tr>
+                <th> <%= trip.id %> </th>
+                <th> <%= link_to trip.title, trip %> </th>
+                <th> <%= trip.description %> </th>
+                <th> <%= trip.price %> </th>
+                <th> <%= trip.country %> </th> 
+                <th> <%= trip.region %> </th>
+                <th> <%= trip.city %> </th>
+                <th> <%= link_to "Redaguoti", edit_trip_path(trip) %> </th>
+                <th> <%= link_to "Ištrinti", trip, :method => :delete %> </th>
+            </tr>
+        <% end %>
+    </table>
+
+    <p><%= link_to "Pridėti", new_trip_path %></p>
+</main>

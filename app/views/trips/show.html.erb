@@ -1,0 +1,18 @@
+<main id="main">
+    <div class="title">
+        <p><%= @title %></p>
+    </div>
+
+    <div class="separation_line">
+        <hr>
+    </div>
+    
+    <%= @trip.title %><br>
+    <%= @trip.description %><br>
+    <%= @trip.price %><br>
+    <%= @trip.country %><br>
+    <%= @trip.region %><br>
+    <%= @trip.city %><br>
+
+    <%= link_to "Grįžti", trips_path %>
+</main>
