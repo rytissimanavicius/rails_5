@@ -12,11 +12,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_210_216_083_451) do
-  create_table 'trips', force: :cascade do |t|
+ActiveRecord::Schema.define(version: 20_210_216_112_646) do
+  create_table 'images', options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci',
+                         force: :cascade do |t|
+    t.string 'name', null: false
+    t.string 'path', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+  end
+
+  create_table 'trips', options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci',
+                        force: :cascade do |t|
     t.string 'title'
     t.string 'description'
-    t.decimal 'price'
+    t.decimal 'price', precision: 10
     t.string 'country'
     t.string 'region'
     t.string 'city'
@@ -24,9 +33,11 @@ ActiveRecord::Schema.define(version: 20_210_216_083_451) do
     t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table 'users', force: :cascade do |t|
+  create_table 'users', options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci',
+                        force: :cascade do |t|
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
+    t.boolean 'admin', default: false, null: false
     t.string 'email', null: false
     t.string 'encrypted_password', limit: 128, null: false
     t.string 'confirmation_token', limit: 128
