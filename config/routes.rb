@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => "/admin", as: "rails_admin"
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'suggestions#suggestions'
 
   get 'kelioniu-paieska', to: 'main#finder'
@@ -7,6 +9,6 @@ Rails.application.routes.draw do
   get 'apie', to: 'main#about'
 
   resources :trips
-  
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -1,12 +1,15 @@
+# frozen_string_literal: true
+
+# CreateTrips
 class CreateTrips < ActiveRecord::Migration[6.0]
   def change
     create_table :trips do |t|
-      t.text :title
-      t.text :description
+      t.string :title
+      t.string :description
       t.decimal :price
-      t.text :country
-      t.text :region
-      t.text :city
+      t.string :country
+      t.string :region
+      t.string :city
 
       t.timestamps
     end
