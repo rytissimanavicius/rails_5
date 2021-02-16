@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => "/admin", as: "rails_admin"
   root 'suggestions#suggestions'
 
   get 'kelioniu-paieska', to: 'main#finder'

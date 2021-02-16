@@ -1,12 +1,12 @@
 class CreateTrips < ActiveRecord::Migration[6.0]
   def change
     create_table :trips do |t|
-      t.string :title
-      t.string :description
+      t.text :title
+      t.text :description
       t.decimal :price
-      t.string :country
-      t.string :region
-      t.string :city
+      t.text :country
+      t.text :region
+      t.text :city
 
       t.timestamps
     end
